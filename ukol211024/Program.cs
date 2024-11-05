@@ -7,7 +7,7 @@
 			new BinaryExpression(new Number(6),
 			new BinaryExpression(new Number(3),new Number(3), "^"), "*")
 													,"+");
-		Console.WriteLine($"Výsledek: {expression.Evaluate()} ,,,,, {expression.GetString()}");
+		Console.WriteLine($"{expression.GetString()} = {expression.Evaluate()} ");
 	}
 }
 
