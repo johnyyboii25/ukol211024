@@ -1,11 +1,24 @@
 ﻿public abstract class UnaryExpression : IExpression
 {
 	protected IExpression _expression;
+	private string _operator;
 
-	public UnaryExpression(IExpression expression)
+	public UnaryExpression(IExpression expression, string operatorSymbol)
 	{
-		_expression = expression;
+		this._expression = expression;
+		this._operator = operatorSymbol;
 	}
 
-	public abstract double Evaluate();
+	public double Evaluate()
+	{
+		return _operator switch
+		{
+			"-" => -Evaluate(),
+			_ => throw new InvalidOperationException("Unknown operator")
+		};
+	}
+	public string GetString()
+	{
+		return $"({_operator}{_expression.GetString()})";
+	}
 }

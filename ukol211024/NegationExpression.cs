@@ -1,6 +1,6 @@
 ﻿public class NegationExpression : UnaryExpression
 {
-	public NegationExpression(IExpression expression) : base(expression) { }
+	public NegationExpression(IExpression expression) : base(expression, "-") { }
 
 	public override double Evaluate()
 	{

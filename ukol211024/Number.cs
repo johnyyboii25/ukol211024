@@ -1,14 +1,18 @@
 ﻿public class Number : IExpression
 {
-	private double _value;
+	private double value;
 
 	public Number(double value)
 	{
-		_value = value;
+		this.value = value;
 	}
 
 	public double Evaluate()
 	{
-		return _value;
+		return value;
+	}
+	public string GetString()
+	{
+		return value.ToString();
 	}
 }
