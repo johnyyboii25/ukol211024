@@ -1,4 +1,4 @@
-﻿public abstract class BinaryExpression : IExpression
+﻿public class BinaryExpression : IExpression
 {
 	protected IExpression _left;
 	protected IExpression _right;
