@@ -19,6 +19,7 @@
 			"-" => _left.Evaluate() - _right.Evaluate(),
 			"*" => _left.Evaluate() * _right.Evaluate(),
 			"/" => _left.Evaluate() / _right.Evaluate(),
+			"^" => Math.Pow(_left.Evaluate(),_right.Evaluate()),
 			_ => throw new InvalidOperationException("Unknown operator")
 		};
 	}
