@@ -1,6 +1,6 @@
 ﻿public class AdditionExpression : BinaryExpression
 {
-	public AdditionExpression(IExpression left, IExpression right) : base(left, right)
+	public AdditionExpression(IExpression left, IExpression right) : base(left, right, "+")
 	{
 
 	}
@@ -13,7 +13,7 @@
 
 public class SubtractionExpression : BinaryExpression
 {
-	public SubtractionExpression(IExpression left, IExpression right) : base(left, right)
+	public SubtractionExpression(IExpression left, IExpression right) : base(left, right, "-")
 	{
 
 	}
@@ -26,7 +26,7 @@ public class SubtractionExpression : BinaryExpression
 
 public class MultiplicationExpresion : BinaryExpression
 {
-	public MultiplicationExpresion(IExpression left, IExpression right) : base(left, right)
+	public MultiplicationExpresion(IExpression left, IExpression right) : base(left, right, "*")
 	{
 
 	}
@@ -39,7 +39,7 @@ public class MultiplicationExpresion : BinaryExpression
 
 public class DivisionExpression : BinaryExpression
 {
-	public DivisionExpression(IExpression left, IExpression right) : base(left, right)
+	public DivisionExpression(IExpression left, IExpression right) : base(left, right, "/")
 	{
 
 	}
@@ -52,7 +52,7 @@ public class DivisionExpression : BinaryExpression
 
 public class ExponentiateExpression : BinaryExpression
 {
-	public ExponentiateExpression(IExpression left, IExpression right) : base(left, right)
+	public ExponentiateExpression(IExpression left, IExpression right) : base(left, right, "^")
 	{
 
 	}
