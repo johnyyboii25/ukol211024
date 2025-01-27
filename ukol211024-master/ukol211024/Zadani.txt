@@ -1,0 +1,30 @@
+﻿Ahoj, posílám zadání úkolu:
+
+do struktury výrazů přidejte možnost převést výraz do stringu v infix notaci (jeho lidské reprezentaci).
+Každý výraz bude mít metodu GetString(), která vrátí tento string. Metodu dejte přímo do interface IExpression.
+
+Výsledný string může vypadat takto:
+3 + 3
+(4 * 7) - 6
+(3 + -3) / (4 * (2 - 7))
+2 * -(1 + 2) 
+
+Pozor na správné uzávorkování, klidně závorky pište u všech binárních výrazů. (Můžete se zkusit zamyslet u kterých nejsou potřeba, vzpomeňte na pořadí operací)
+
+Hotový úkol mi prosím pošlete na discord do úterý 5.11. 23:59 jako odkaz na Git repozitář.
+Kdyby něco, pište do https://discord.com/channels/1148330228020691085/1177643829004877874, budu se snažit odpovídat. 🙂
+
+
+Tipy na implementaci:
+Každý druh výrazu bude metodu GetString implementovat jinak.
+Číselný výraz vrátí pouze string zadaného čísla. Unární výraz vrátí string operandu (výraz nad kterým operuje) před kterým bude např. znak '-'.
+Binární výraz vrátí string složený ze stringů obou operandů spojených operátorem, zde si dejte pozor na uzávorkování.
+
+Poznámky:
+Je to vlastně další metoda v composite patternu, stejně jako metoda Evaluate().
+[info k infix, postfix a prefix notaci](https://www.geeksforgeeks.org/infix-postfix-prefix-notation/)
+
+Bonus:
+Zkuste metodu upravit, aby vrátila string v postfix (např. 33+, nebo 47\*6-, viz příklady nahoře), nebo prefix notaci (+33, -\*476). Mělo by být pouze třeba změnit pořadí stringů operandů a znaků operace v GetString() u binárních operací. U prefix a postfix výrazů nejsou potřeba závorky.
+
+@everyone
